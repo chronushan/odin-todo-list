@@ -60,10 +60,10 @@ footer {
 	display: flex;
 	flex-direction: column;
 	background-color: aliceblue;
-	flex-grow: 1;
-	max-width: 200px;
+	width: 200px;
 	box-shadow: 3px 0px 20px 0px rgba(0, 0, 0, 0.5);
 	padding-left: 2rem;
+	padding-right: 2rem;
 }
 
 #main-todo {
@@ -78,15 +78,17 @@ footer {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	flex: auto;
-	max-width: 200px;
+	flex: 0 0 250px;
+	/* max-width: 300px; */
 	border: solid black 2px;
 	padding: 1rem;
 	padding-top: 0;
 	border-radius: 12px;
+	cursor: pointer;
 }
 
 .title {
+	margin: 12px 0px;
 	font-weight: bolder;
 	font-size: large;
 }
@@ -103,5 +105,35 @@ footer {
 	align-self: flex-end;
 }
 
+.description {
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* Change this number to your desired line limit */
+	-webkit-box-orient: vertical;
+	overflow: hidden; /* Hides the extra text */
+	margin-bottom: 24px;
+	background-color: rgba(0, 0, 0, 0.137);
+	border-radius: 10px;
+	padding: 3px;
+}
+
 p {
+	margin: 0;
+}
+
+dialog {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	margin: auto;
+}
+
+dialog:not([open]) {
+	display: none;
+}
+
+dialog button {
+	margin-top: 24px;
+	border: solid black 2px;
+	font-weight: bold;
+	border-radius: 12px;
 }
