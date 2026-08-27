@@ -24,6 +24,8 @@ export default class Todo {
 		dueDate.textContent = this.dueDate;
 		priority.textContent = this.priority;
 
+		priority.setAttribute("data-priority", priority.textContent.trim());
+
 		todoDiv.append(title, description, dueDate, priority);
 		document.querySelector("#main-todo").append(todoDiv);
 	}

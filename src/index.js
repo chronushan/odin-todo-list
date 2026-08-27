@@ -11,4 +11,4 @@ const newTodo3 = new Todo("Test 3", "Test 3", "", "High");
 newTodo3.createTodoDOM();
 
 showDialog();
-priorityCheck();
+// priorityCheck();
