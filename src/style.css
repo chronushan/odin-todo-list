@@ -103,13 +103,20 @@ footer {
 
 .priority {
 	align-self: flex-end;
+	padding: 3px 10px;
+	border-radius: 12px;
+	border: solid black 2px;
+	color: black;
+}
+
+.card .description {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: auto;
 }
 
 .description {
-	display: -webkit-box;
-	-webkit-line-clamp: 2; /* Change this number to your desired line limit */
-	-webkit-box-orient: vertical;
-	overflow: hidden; /* Hides the extra text */
 	margin-bottom: 24px;
 	background-color: rgba(0, 0, 0, 0.137);
 	border-radius: 10px;
@@ -125,6 +132,8 @@ dialog {
 	flex-direction: column;
 	justify-content: flex-start;
 	margin: auto;
+	width: 500px;
+	height: 300px;
 }
 
 dialog:not([open]) {

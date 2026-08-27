@@ -9,10 +9,13 @@ export default function showDialog() {
 	document.addEventListener("click", (e) => {
 		if (e.target.closest(".card")) {
 			todoDialog.showModal();
-			dialogTitle.textContent = "Test d";
-			dialogDescription.textContent = "Test d";
-			dialogDueDate.textContent = "dddd";
-			dialogPriority.textContent = "High";
+			dialogTitle.textContent = e.target.querySelector(".title").textContent;
+			dialogDescription.textContent =
+				e.target.querySelector(".description").textContent;
+			dialogDueDate.textContent =
+				e.target.querySelector(".dueDate").textContent;
+			dialogPriority.textContent =
+				e.target.querySelector(".priority").textContent;
 		}
 	});
 
