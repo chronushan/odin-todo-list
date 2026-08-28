@@ -156,3 +156,15 @@ dialog button {
 .priority[data-priority="High"] {
 	background: RGB(255, 179, 186);
 }
+
+.card[data-status="true"] {
+	text-decoration: none;
+}
+.card[data-status="false"] {
+	text-decoration: none;
+}
+
+.card button {
+	margin-top: 12px;
+	border-radius: 8px;
+}

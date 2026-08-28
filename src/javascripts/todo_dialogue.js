@@ -1,3 +1,5 @@
+import priorityToggle from "./todo_priority.js";
+
 export default function showDialog() {
 	const todoDialog = document.querySelector("#todoDialog");
 	const dialogTitle = document.querySelector(".dialogTitle");
@@ -16,6 +18,8 @@ export default function showDialog() {
 				e.target.querySelector(".dueDate").textContent;
 			dialogPriority.textContent =
 				e.target.querySelector(".priority").textContent;
+		} else if (e.target.closest(".priority")) {
+			priorityToggle();
 		}
 	});
 

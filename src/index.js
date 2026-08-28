@@ -1,7 +1,7 @@
 import "./style.css";
 import Todo from "./javascripts/create_todo.js";
 import showDialog from "./javascripts/todo_dialogue.js";
-import priorityCheck from "./javascripts/priority_style.js";
+import statusToggle from "./javascripts/todo_status.js";
 
 const newTodo = new Todo("Test 3", "Test 3", "", "High");
 newTodo.createTodoDOM();
@@ -11,4 +11,4 @@ const newTodo3 = new Todo("Test 3", "Test 3", "", "High");
 newTodo3.createTodoDOM();
 
 showDialog();
-// priorityCheck();
+statusToggle();
