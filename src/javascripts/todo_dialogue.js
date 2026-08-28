@@ -9,16 +9,20 @@ export default function showDialog() {
 	const closeDialog = document.querySelector("#closeDialog");
 
 	document.addEventListener("click", (e) => {
-		if (e.target.closest(".card")) {
+		const card = e.target.closest(".card");
+		if (card) {
 			todoDialog.showModal();
-			dialogTitle.textContent = e.target.querySelector(".title").textContent;
+			dialogTitle.textContent = card.querySelector(".title").textContent;
 			dialogDescription.textContent =
-				e.target.querySelector(".description").textContent;
-			dialogDueDate.textContent =
-				e.target.querySelector(".dueDate").textContent;
-			dialogPriority.textContent =
-				e.target.querySelector(".priority").textContent;
-		} else if (e.target.closest(".priority")) {
+				card.querySelector(".description").textContent;
+			dialogDueDate.textContent = card.querySelector(".dueDate").textContent;
+			dialogPriority.textContent = card.querySelector(".priority").textContent;
+		}
+	});
+
+	document.addEventListener("click", (e) => {
+		if (e.target.closest(".priority")) {
+			e.stopPropagation();
 			priorityToggle();
 		}
 	});
