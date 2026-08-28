@@ -1,5 +1,5 @@
 export default function priorityToggle() {
-	const priorty = document.querySelector(".priority");
+	const priorty = document.querySelector(".priority, .dialoguePriority");
 	if ((priorty.textContent = "Low")) {
 		priorty.textContent = "Medium";
 		priorty.setAttribute("data-priority", "Medium");

@@ -17,6 +17,10 @@ export default function showDialog() {
 				card.querySelector(".description").textContent;
 			dialogDueDate.textContent = card.querySelector(".dueDate").textContent;
 			dialogPriority.textContent = card.querySelector(".priority").textContent;
+			dialogPriority.setAttribute(
+				"data-priority",
+				card.querySelector(".priority").getAttribute("data-priority"),
+			);
 		}
 	});
 
