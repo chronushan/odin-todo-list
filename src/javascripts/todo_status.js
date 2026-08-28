@@ -1,8 +1,9 @@
-export default function statusToggle() {
-	const status = document.querySelector(".card");
-	if (status.getAttribute("data-status") === "true") {
-		status.style.textDecoration = "none";
+export default function statusToggle(card) {
+	if (card.getAttribute("data-status") === "true") {
+		card.style.textDecoration = "none";
+		card.setAttribute("data-status", "false");
 	} else {
-		status.style.textDecoration = "line-through";
+		card.style.textDecoration = "line-through";
+		card.setAttribute("data-status", "true");
 	}
 }

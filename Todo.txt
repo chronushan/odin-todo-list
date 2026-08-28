@@ -1,0 +1,6 @@
+Add create new Todo button function
+Add create new Project button function
+Add Task and Project listing function on the left
+Add slash through text decoration when task is done
+Add due date function
+Add local storage function

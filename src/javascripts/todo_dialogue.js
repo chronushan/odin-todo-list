@@ -1,4 +1,5 @@
 import priorityToggle from "./todo_priority.js";
+import statusToggle from "./todo_status.js";
 
 export default function showDialog() {
 	const todoDialog = document.querySelector("#todoDialog");
@@ -11,9 +12,14 @@ export default function showDialog() {
 	document.addEventListener("click", (e) => {
 		const card = e.target.closest(".card");
 		const priority = e.target.closest(".priority");
+		const status = e.target.closest(".status");
+
 		if (priority) {
 			e.stopPropagation();
 			priorityToggle(priority);
+		} else if (status) {
+			e.stopPropagation();
+			statusToggle(card);
 		} else if (card) {
 			todoDialog.showModal();
 			dialogTitle.textContent = card.querySelector(".title").textContent;

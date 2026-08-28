@@ -1,7 +1,6 @@
 import "./style.css";
 import Todo from "./javascripts/todo_DOM.js";
 import showDialog from "./javascripts/todo_dialogue.js";
-import statusToggle from "./javascripts/todo_status.js";
 import newTodoButton from "./javascripts/create_new_todo_button.js";
 
 const newTodo = new Todo("Test 3", "Test 3", "", "High");
@@ -12,5 +11,4 @@ const newTodo3 = new Todo("Test 3", "Test 3", "", "High");
 newTodo3.createTodoDOM();
 
 showDialog();
-statusToggle();
 newTodoButton();
