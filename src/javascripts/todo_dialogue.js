@@ -10,7 +10,11 @@ export default function showDialog() {
 
 	document.addEventListener("click", (e) => {
 		const card = e.target.closest(".card");
-		if (card) {
+		const priority = e.target.closest(".priority");
+		if (priority) {
+			e.stopPropagation();
+			priorityToggle(priority);
+		} else if (card) {
 			todoDialog.showModal();
 			dialogTitle.textContent = card.querySelector(".title").textContent;
 			dialogDescription.textContent =
@@ -21,13 +25,6 @@ export default function showDialog() {
 				"data-priority",
 				card.querySelector(".priority").getAttribute("data-priority"),
 			);
-		}
-	});
-
-	document.addEventListener("click", (e) => {
-		if (e.target.closest(".priority")) {
-			e.stopPropagation();
-			priorityToggle();
 		}
 	});
 
