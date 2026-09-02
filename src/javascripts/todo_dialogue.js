@@ -11,7 +11,7 @@ export default function showDialog() {
 
 	document.addEventListener("click", (e) => {
 		const card = e.target.closest(".card");
-		const priority = e.target.closest(".priority");
+		const priority = e.target.closest("#cardPriority");
 		const status = e.target.closest(".status");
 
 		if (priority) {

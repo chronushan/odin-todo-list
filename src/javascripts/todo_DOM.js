@@ -18,6 +18,7 @@ export default class Todo {
 		description.classList.add("description");
 		dueDate.classList.add("dueDate");
 		priority.classList.add("priority");
+		priority.setAttribute("id", "cardPriority");
 
 		title.textContent = this.title;
 		description.textContent = this.description;
