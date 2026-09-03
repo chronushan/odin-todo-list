@@ -169,3 +169,46 @@ dialog button {
 	margin-top: 12px;
 	border-radius: 8px;
 }
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+label {
+	font-size: 1rem;
+	font-weight: bolder;
+}
+
+#createTodoForm div {
+	display: flex;
+	justify-content: space-between;
+}
+
+#newDueDate,
+#newPriority {
+	/* width: 150px; */
+}
+
+div label {
+	display: flex;
+	gap: 1.5rem;
+}
+
+#createTodoForm h3 {
+	margin: 0;
+	margin-bottom: 1rem;
+}
+
+#createTodoForm {
+	justify-content: space-around;
+}
+
+form button {
+	background-color: RGB(174, 233, 196);
+}
+
+#createTodoForm > button {
+	background-color: RGB(255, 179, 186);
+}

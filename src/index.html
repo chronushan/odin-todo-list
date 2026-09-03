@@ -62,9 +62,31 @@
 
 		<dialog id="createTodoForm">
 			<h3>Create new Todo:</h3>
+			<form method="dialog">
+				<label for="newTitle">Title:</label>
+				<input type="text" id="newTitle" name="title" />
+				<label for="newDescription">Description:</label>
+				<textarea name="description" id="newDescription"></textarea>
+				<div>
+					<label for="newDueDate"
+						>Due Date:
 
-			<form action=""></form>
-			<button id="TodoClose" aria-label="Close">Close &times</button>
+						<input type="date" id="newDueDate" name="dueDate" />
+					</label>
+
+					<label for="newPriority"
+						>Priority:
+
+						<select name="priority" id="newPriority">
+							<option value="Low">Low</option>
+							<option value="Medium">Medium</option>
+							<option value="High">High</option>
+						</select>
+					</label>
+				</div>
+				<button>Create</button>
+			</form>
+			<button id="TodoClose" aria-label="Close">Close</button>
 		</dialog>
 
 		<footer>
