@@ -142,7 +142,7 @@ dialog:not([open]) {
 }
 
 dialog button {
-	margin-top: 24px;
+	margin-top: 15px;
 	border: solid black 2px;
 	font-weight: bold;
 	border-radius: 12px;
@@ -205,10 +205,24 @@ div label {
 	justify-content: space-around;
 }
 
-form button {
+#createTodoForm > button {
+	background-color: RGB(255, 179, 186);
+}
+
+form button:last-of-type {
 	background-color: RGB(174, 233, 196);
 }
 
-#createTodoForm > button {
-	background-color: RGB(255, 179, 186);
+button[type="reset"] {
+	background-color: RGB(254, 243, 182);
+}
+
+#createTodoForm form div:last-of-type button {
+	flex: 1;
+	margin: 0;
+}
+
+#createTodoForm form div:last-of-type {
+	gap: 1rem;
+	align-items: center;
 }
