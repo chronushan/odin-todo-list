@@ -12,3 +12,15 @@ newTodo3.createTodoDOM();
 
 showDialog();
 newTodoButton();
+
+localStorage.setItem("title", "");
+localStorage.setItem("description", "");
+localStorage.setItem("dueDate", "");
+localStorage.setItem("priority", "");
+localStorage.setItem("status", "");
+
+const titleArr = [];
+const descriptionArr = [];
+const datesArr = [];
+const priorityArr = [];
+const statusArr = [];
