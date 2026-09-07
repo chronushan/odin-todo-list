@@ -2,6 +2,7 @@ import "./style.css";
 import Todo from "./javascripts/todo_DOM.js";
 import showDialog from "./javascripts/todo_dialogue.js";
 import newTodoButton from "./javascripts/create_new_todo_button.js";
+import localStorageSave from "./javascripts/localStorage_save.js";
 
 const newTodo = new Todo("Test 3", "Test 3", "", "High");
 newTodo.createTodoDOM();
@@ -13,14 +14,8 @@ newTodo3.createTodoDOM();
 showDialog();
 newTodoButton();
 
-localStorage.setItem("title", "");
-localStorage.setItem("description", "");
-localStorage.setItem("dueDate", "");
-localStorage.setItem("priority", "");
-localStorage.setItem("status", "");
-
-const titleArr = [];
-const descriptionArr = [];
-const datesArr = [];
-const priorityArr = [];
-const statusArr = [];
+localStorageSave("titleArr", "hello world");
+localStorageSave("descriptionArr", "hello world");
+localStorageSave("dueDateArr", "hello world");
+localStorageSave("priorityArr", "hello world");
+localStorageSave("statusButtonArr", "hello world");

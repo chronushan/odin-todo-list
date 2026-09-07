@@ -1,7 +1,9 @@
-export default function localStorageSave() {
-	const titleArr = [];
-	const descriptionArr = [];
-	const datesArr = [];
-	const priorityArr = [];
-	const statusArr = [];
+export default function localStorageSave(key, value) {
+	let arr = JSON.parse(localStorage.getItem(key));
+	if (!arr) {
+		arr = [];
+	} else {
+		arr.push(value);
+		localStorage.setItem(key, JSON.stringify(arr));
+	}
 }
