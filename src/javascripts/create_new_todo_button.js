@@ -1,9 +1,16 @@
+import Todo from "./todo_DOM.js";
+
 export default function newTodoButton() {
 	const newTodo = document.querySelector("#new_todo");
 	const createTodoForm = document.querySelector("#createTodoForm");
 	const TodoClose = document.querySelector("#TodoClose");
 	const form = document.querySelector("#createTodoForm form");
 	const todoCreateBttn = document.querySelector("#todoCreateBttn");
+
+	const newTitle = document.querySelector("#newTitle");
+	const newDescription = document.querySelector("#newDescription");
+	const newDueDate = document.querySelector("#newDueDate");
+	const newPriority = document.querySelector("#newPriority");
 
 	newTodo.addEventListener("click", (e) => {
 		createTodoForm.showModal();
@@ -26,5 +33,15 @@ export default function newTodoButton() {
 			form.reset();
 			createTodoForm.close();
 		}
+	});
+
+	todoCreateBttn.addEventListener("click", (e) => {
+		const newTodo = new Todo(
+			newTitle.value,
+			newDescription.value,
+			newDueDate.value,
+			newPriority.value,
+		);
+		console.log(newTodo);
 	});
 }

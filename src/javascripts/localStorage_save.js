@@ -1,3 +1,5 @@
+import Todo from "./todo_DOM.js";
+
 export default function localStorageSave(key, value) {
 	let arr = JSON.parse(localStorage.getItem(key));
 	if (!arr) {
@@ -7,3 +9,7 @@ export default function localStorageSave(key, value) {
 		localStorage.setItem(key, JSON.stringify(arr));
 	}
 }
+
+// function localStorageSave(todoDom) {
+// 	const newTodo = new Todo();
+// }
