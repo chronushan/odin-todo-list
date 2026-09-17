@@ -64,20 +64,20 @@
 			<h3>Create new Todo:</h3>
 			<form method="dialog">
 				<label for="newTitle">Title:</label>
-				<input type="text" id="newTitle" name="title" />
+				<input type="text" id="newTitle" name="title" required />
 				<label for="newDescription">Description:</label>
-				<textarea name="description" id="newDescription"></textarea>
+				<textarea name="description" id="newDescription" required></textarea>
 				<div>
 					<label for="newDueDate"
 						>Due Date:
 
-						<input type="date" id="newDueDate" name="dueDate" />
+						<input type="date" id="newDueDate" name="dueDate" required />
 					</label>
 
 					<label for="newPriority"
 						>Priority:
 
-						<select name="priority" id="newPriority">
+						<select name="priority" id="newPriority" required>
 							<option value="Low">Low</option>
 							<option value="Medium">Medium</option>
 							<option value="High">High</option>

@@ -1,10 +1,6 @@
 export default function localStorageLoad(key, value) {
 	//title, description, dates, priority, status
-	const titleArr = JSON.parse(localStorage.getItem("titleArr"));
-	const descriptionArr = JSON.parse(localStorage.getItem("descriptionArr"));
-	const dueDateArr = JSON.parse(localStorage.getItem("dueDateArr"));
-	const priorityArr = JSON.parse(localStorage.getItem("priorityArr"));
-	const statusButtonArr = JSON.parse(localStorage.getItem("statusButtonArr"));
+	const todoJSON = JSON.parse(localStorage.getItem("Todo"));
 
 	const card = document.createElement("div");
 	const title = document.createElement("p");

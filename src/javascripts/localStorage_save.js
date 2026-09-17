@@ -1,7 +1,7 @@
 import Todo from "./todo_DOM.js";
 
-export default function localStorageSave(key, value) {
-	let arr = JSON.parse(localStorage.getItem(key));
+export default function localStorageSave(value) {
+	let arr = JSON.parse(localStorage.getItem("Todo"));
 	if (!arr) {
 		arr = [];
 	} else {

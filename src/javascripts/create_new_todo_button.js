@@ -1,3 +1,4 @@
+import localStorageSave from "./localStorage_save.js";
 import Todo from "./todo_DOM.js";
 
 export default function newTodoButton() {
@@ -42,6 +43,8 @@ export default function newTodoButton() {
 			newDueDate.value,
 			newPriority.value,
 		);
+
+		localStorageSave(newTodo);
 		newTodo.createTodoDOM();
 		form.reset();
 	});
