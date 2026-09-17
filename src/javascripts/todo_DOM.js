@@ -1,3 +1,5 @@
+import { formatDate } from "./utils/dates.js";
+
 export default class Todo {
 	constructor(title, description, dueDate, priority) {
 		this.title = title;
@@ -12,6 +14,7 @@ export default class Todo {
 		const description = document.createElement("p");
 		const dueDate = document.createElement("p");
 		const priority = document.createElement("p");
+		const statusButton = document.createElement("button");
 
 		todoDiv.classList.add("card");
 		title.classList.add("title");
@@ -19,15 +22,17 @@ export default class Todo {
 		dueDate.classList.add("dueDate");
 		priority.classList.add("priority");
 		priority.setAttribute("id", "cardPriority");
+		statusButton.classList.add("status");
 
 		title.textContent = this.title;
 		description.textContent = this.description;
-		dueDate.textContent = this.dueDate;
+		dueDate.textContent = formatDate(this.dueDate);
 		priority.textContent = this.priority;
+		statusButton.textContent = "Done";
 
 		priority.setAttribute("data-priority", priority.textContent.trim());
 
-		todoDiv.append(title, description, dueDate, priority);
+		todoDiv.append(title, description, dueDate, priority, statusButton);
 		document.querySelector("#main-todo").append(todoDiv);
 	}
 }
