@@ -98,7 +98,7 @@ footer {
 	margin-top: auto;
 }
 .dueDate::before {
-	content: "Due date: ";
+	content: "Due date:\00a0\00a0\00a0\00a0";
 }
 
 .priority {

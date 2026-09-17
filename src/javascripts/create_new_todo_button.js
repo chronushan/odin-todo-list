@@ -42,6 +42,6 @@ export default function newTodoButton() {
 			newDueDate.value,
 			newPriority.value,
 		);
-		console.log(newTodo);
+		newTodo.createTodoDOM();
 	});
 }
