@@ -1,5 +1,6 @@
 import localStorageSave from "./localStorage_save.js";
 import Todo from "./todo_DOM.js";
+import localStorageLoad from "./localStorage_load.js";
 
 export default function newTodoButton() {
 	const newTodo = document.querySelector("#new_todo");
@@ -18,7 +19,6 @@ export default function newTodoButton() {
 	});
 
 	TodoClose.addEventListener("click", (e) => {
-		form.reset();
 		createTodoForm.close();
 	});
 
@@ -31,7 +31,6 @@ export default function newTodoButton() {
 			e.clientY <= rect.bottom;
 
 		if (!isInDialog) {
-			form.reset();
 			createTodoForm.close();
 		}
 	});
@@ -45,7 +44,10 @@ export default function newTodoButton() {
 		);
 
 		localStorageSave(newTodo);
-		newTodo.createTodoDOM();
+	});
+
+	todoCreateBttn.addEventListener("close", (e) => {
 		form.reset();
+		localStorageLoad();
 	});
 }
