@@ -1,5 +1,3 @@
-Add create new Todo button function
 Add create new Project button function
 Add Task and Project listing function on the left
-Add due date function
-Add local storage function
+Add localstorage load function. (foreach the array and append them all to todo div)
