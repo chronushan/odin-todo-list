@@ -222,3 +222,8 @@ button[type="reset"] {
 	gap: 1rem;
 	align-items: center;
 }
+
+.localStorageTodo {
+	margin: 0;
+	padding: 0;
+}
