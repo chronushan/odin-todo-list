@@ -31,6 +31,7 @@ export default function newTodoButton() {
 			e.clientY <= rect.bottom;
 
 		if (!isInDialog) {
+			form.reset();
 			createTodoForm.close();
 		}
 	});

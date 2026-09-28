@@ -187,11 +187,6 @@ label {
 	justify-content: space-between;
 }
 
-#newDueDate,
-#newPriority {
-	/* width: 150px; */
-}
-
 div label {
 	display: flex;
 	gap: 1.5rem;
