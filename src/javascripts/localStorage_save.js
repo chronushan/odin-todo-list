@@ -5,7 +5,7 @@ export default function localStorageSave(value) {
 	if (!arr) {
 		arr = [];
 	}
-	value.id = localStorage.length;
+	value.id = arr.length + 1;
 	arr.push(value);
 	localStorage.setItem("Todo", JSON.stringify(arr));
 }
