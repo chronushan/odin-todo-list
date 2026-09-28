@@ -27,10 +27,13 @@ export default function localStorageLoad(value) {
 	priority.setAttribute("id", "cardPriority");
 	statusButton.classList.add("status");
 
-	title.textContent = value.title;
-	description.textContent = value.description;
-	dueDate.textContent = formatDate(value.dueDate);
-	priority.textContent = value.priority;
+	arr.forEach((item) => {
+		title.textContent = item.title;
+		description.textContent = item.description;
+		dueDate.textContent = formatDate(item.dueDate);
+		priority.textContent = item.priority;
+	});
+
 	statusButton.textContent = "Done";
 
 	priority.setAttribute("data-priority", priority.textContent.trim());
