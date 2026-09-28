@@ -7,4 +7,3 @@ import localStorageLoad from "./javascripts/localStorage_load.js";
 
 showDialog();
 newTodoButton();
-localStorageLoad();

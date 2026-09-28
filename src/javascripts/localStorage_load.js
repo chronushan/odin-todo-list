@@ -1,4 +1,6 @@
-export default function localStorageLoad() {
+import { formatDate } from "./utils/dates.js";
+
+export default function localStorageLoad(value) {
 	const localStorageTodo = document.querySelector(".localStorageTodo");
 
 	const todoJSON = JSON.parse(localStorage.getItem("Todo"));
@@ -12,7 +14,12 @@ export default function localStorageLoad() {
 	const priority = document.createElement("p");
 	const statusButton = document.createElement("button");
 
+	let arr = JSON.parse(localStorage.getItem("Todo"));
+
 	todoDiv.classList.add("card");
+	todoDiv.setAttribute("data-id", arr.length);
+	todoDiv.setAttribute("class", "card");
+	todoDiv.setAttribute("data-status", "true");
 	title.classList.add("title");
 	description.classList.add("description");
 	dueDate.classList.add("dueDate");
@@ -20,17 +27,14 @@ export default function localStorageLoad() {
 	priority.setAttribute("id", "cardPriority");
 	statusButton.classList.add("status");
 
-	title.textContent = "lol";
-	description.textContent = this.description;
-	dueDate.textContent = formatDate(this.dueDate);
-	priority.textContent = this.priority;
+	title.textContent = value.title;
+	description.textContent = value.description;
+	dueDate.textContent = formatDate(value.dueDate);
+	priority.textContent = value.priority;
 	statusButton.textContent = "Done";
 
 	priority.setAttribute("data-priority", priority.textContent.trim());
 
 	todoDiv.append(title, description, dueDate, priority, statusButton);
 	localStorageTodo.append(todoDiv);
-
-	todoDiv.setAttribute("class", "card");
-	todoDiv.setAttribute("data-status", "true");
 }

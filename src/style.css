@@ -159,10 +159,10 @@ dialog button {
 	background: RGB(255, 179, 186);
 }
 
-.card[data-status="true"] {
+.card[data-status="false"] {
 	text-decoration: line-through;
 }
-.card[data-status="false"] {
+.card[data-status="true"] {
 	text-decoration: none;
 }
 

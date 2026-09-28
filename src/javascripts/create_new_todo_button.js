@@ -42,13 +42,14 @@ export default function newTodoButton() {
 			newDescription.value,
 			newDueDate.value,
 			newPriority.value,
+			"true",
 		);
 
 		localStorageSave(newTodo);
+		localStorageLoad(newTodo);
 	});
 
 	todoCreateBttn.addEventListener("close", (e) => {
 		form.reset();
-		localStorageLoad();
 	});
 }
